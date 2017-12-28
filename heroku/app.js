@@ -63,7 +63,7 @@ App.controller('mainCtrl', ['$scope', function($scope) {
       title: "Travellrs",
       desc: "Record and share all the places you've been to in the world!",
       icon: "img/earth-bw.png",
-      heroku: "https://dashboard.heroku.com/apps/rmw-travellrs",
+      heroku: "https://rmw-travellrs.herokuapp.com/",
       github: "https://github.com/ryanwaite28/travellrs",
       date: "June 2016"
     },
