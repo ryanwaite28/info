@@ -13,8 +13,8 @@ App.controller('mainCtrl', ['$scope', function($scope) {
     desc: "Computer Science Major (Currently a Student)",
     img: "img/me_dev.jpg",
     links: [
-      {name: "Home", href: "/"},
-      {name: "Story", href: "/story"}
+      {name: "Home", href: "/info"},
+      {name: "Story", href: "/info/story"}
     ]
   }
 
