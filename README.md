@@ -1,6 +1,3 @@
-#Online Resume
-> Resume In A Web Development / Web Design Format!
-
+# Ryan M. Waite
+> Web & Mobile Developer/Programmer
 -----
-
-https://ryanwaite28.github.io/resume/
