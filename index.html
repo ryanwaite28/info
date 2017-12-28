@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Ryan M. Waite</title>
+	<meta name="google-site-verification" content="XKc21ABk3JNYP7HrN7KD4idreF7ap0vaS77BcAtyLvY" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/emerald.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 785px)" href="mobile-style.css">
+	<link rel="icon" type="image/jpg" size="20x20" href="img/me_dev.jpg" />
+	<script src="https://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/bootstrap.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/emerald.js"></script>
+	<script src="script.js"></script>
+	<script>
+		$(document).ready(function() {
+			const width = $(window).width();
+			width <= 750 ? $("#top-nav").removeClass("in") : $("#top-nav").addClass("in");
+
+			$(window).resize(function() {
+				const width = $(window).width();
+				width <= 750 ? $("#top-nav").removeClass("in") : $("#top-nav").addClass("in");
+			});
+
+			$("#top-nav > li").click(function() {
+				var section_id = $(this).data("section").toString();
+				var elm = $( section_id );
+				var num;
+
+				if(section_id === "top"){
+					num = 0;
+				}
+				else if(section_id === "bottom"){
+					num = $(document).height();
+				} 
+				else{
+					num = elm.offset().top - 25;
+				}
+
+				$('html, body').animate({
+						scrollTop: num // 0
+				}, 1000);
+
+				const width = $(window).width();
+				if(width <= 750){
+					$("#top-nav").removeClass("in");
+					$("#mobile-menu").toggleClass("fa-bars").toggleClass("fa-times");
+				}
+				else {
+					$("#top-nav").addClass("in");
+				}
+
+			});
+
+			$("#mobile-menu").click(function(){
+				$(this).toggleClass("fa-bars").toggleClass("fa-times");
+			});
+		});
+	</script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="masterCtrl">
+
+	<div id="top-nav-c">
+		<p class="text-center" id="mm-c"><i data-toggle="collapse" data-target="#top-nav" title="Toggle Menu" id="mobile-menu" class="fa fa-bars" aria-hidden="true"></i></p>
+		<ul id="top-nav" class="collapse in">
+			<li class="transition" data-section="top">Top</li>
+			<li class="transition" data-section="#skills-box">Skills</li>
+			<li class="transition" data-section="#work-box">Work</li>
+			<li class="transition" data-section="#projects-box">Projects</li>
+			<li class="transition" data-section="#education-box">Education</li>
+			<li class="transition" data-section="#credentials-box">Credentials</li>
+			<li class="transition" data-section="#references-box">References</li>
+			<li class="transition" data-section="bottom">Bottom</li>
+		</ul>
+	</div>
+
+	<div id="middle">
+		<div class="container-fluid">
+			<!-- Header -->
+			<header id="header-box" style="position: relative" class="row row-padd">
+				<div class="col-md-12">
+
+
+					<img id="" class="bio-img transition" src="img/me_dev.jpg" title="Ryan M. Waite" alt="Ryan M. Waite" />
+					<!-- <div style="position: relative; overflow: hidden; width: 160px; height: 165px; display: block; margin: auto;">
+
+							<img id="bio-img-1" class="ghost bio-img transition" src="img/pro-ryan-1.jpg" title="Ryan M. Waite" alt="Ryan M. Waite" />
+							<img id="bio-img-2" class="bio-img transition" src="img/me_dev.jpg" title="Ryan M. Waite" alt="Ryan M. Waite" />
+
+					</div> -->
+					<h1 class="text-center"><strong>Ryan M. Waite</strong></h1>
+					<h3 class="text-center">Web & Mobile Developer/Programmer</h3>
+					<br>
+					<p class="text-center"></p>
+					<hr class="hr-black">
+					<iframe class="middlr" style="border:none; overflow:hidden; width: 500px; max-width: 100%; height: 375px;" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FUdacity%2Fposts%2F818344741604199&width=500" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					<hr class="hr-black">
+					<div class="col-md-6 text-center">
+						<strong>Location</strong>: <a data-toggle="modal" href="#mapModal">Gaithersburg, MD</a><br>
+						<strong>Mobile</strong>: <a title="Cell Phone" href="tel:2402717889">(240) - 271 - 7889</a><br>
+						<strong>Email</strong>: <a title="Send Email" href="mailto:ryanwaite28@gmail.com">ryanwaite28@gmail.com</a>
+					</div>
+					<div class="col-md-6 text-center">
+						<strong>Google+</strong>: <a title="Google Plus" href="https://plus.google.com/u/0/+RyanWaite28">RyanWaite28</a><br>
+						<strong>LinkedIn</strong>: <a title="LinkedIn Page" href="https://www.linkedin.com/in/ryanwaite28">ryanwaite28</a><br>
+						<strong>GitHub</strong>: <a title="GitHub Profile" href="https://github.com/ryanwaite28">ryanwaite28</a>
+					</div>
+					<br>
+					<div class="col-md-12">
+						<br>
+						<p class="text-center">
+							
+							<Strong>Story</strong>: <a title="My Story" href="/story">ryanwaite.info/story</a><br>
+							<Strong>Heroku</strong>: <a title="My Heroku Apps" href="/heroku">ryanwaite.info/heroku</a><br>
+							<strong>Resume</strong>: <a title="Resume - PDF" href="story/docs/ryan-waite_resume.pdf">Resume</a>
+
+						</p>
+					</div>
+				</div>
+				<!-- Modal -->
+				<div id="mapModal" class="modal fade" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title text-center">Map</h4>
+							</div>
+							<div class="modal-body">
+								<p class="text-center"><a title="Gaithersburg, MD" href="https://www.google.com/maps/place/Gaithersburg,+MD/@39.1355193,-77.2468792,13z/data=!3m1!4b1!4m5!3m4!1s0x89b62d3624ca13b5:0xe38f5a8180ad7235!8m2!3d39.1434406!4d-77.2013705"><strong>Gaithersburg, MD (Google Maps)</strong></a></p>
+								<img class="middlr" style="width: 100%;" src="img/gaithersburg_map.PNG" title="Gaithersburg, MD" alt="Gaithersburg, MD" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</header>
+
+			<!-- Sections -->
+			<section id="skills-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">Skills<br><i class="fa fa-lightbulb-o" aria-hidden="true"></i></h2>
+					<ul id="skills-list">
+						<li class="transition" ng-repeat="s in skills" title="I know {{ s }}">{{ s }}</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="work-box" class="row row-padd bg-grey-2">
+				<div class="col-md-12">
+					<h2 class="text-center">Work<br><i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+					<br>
+					<div class="work-item bg-grey-1" ng-repeat="w in workItems">
+						<img class="middlr transition" src="{{ w.icon }}" title="{{ w.name }}" alt="{{ w.name }}" />
+						<h3 class="text-center">{{ w.name }}</h3>
+						<h4 class="text-center">{{ w.title }}</h4>
+						<p class="text-center">{{ w.dates }}</p>
+						<p class="text-center">{{ w.location }}</p>
+						<hr class="hr-short">
+						<ul>
+							<li ng-repeat="t in w.tasks">
+								<p>{{ t }}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects-box" class="row row-padd bg-grey-4">
+				<div class="col-md-12">
+					<h2 class="text-center">Projects<br><i class="fa fa-file-code-o" aria-hidden="true"></i></h2>
+					<br>
+					<div class="project-item bg-grey-5 row" ng-repeat="p in projects">
+						<div class="col-md-3">
+							<img class="app-icon middlr transition" src="{{ p.image }}" title="{{ p.title }}" alt="{{ p.title }}" />
+						</div>
+						<div class="col-md-9">
+							<h3 class="">{{ p.title }}</h3>
+							<br>
+							<p class="">
+								{{ p.description }}
+							</p>
+							<p class="">
+								<strong>Project Link</strong>: <a title="{{ p.linkName }}" href="{{ p.linkHref }}"><span>{{ p.linkName }}</span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="education-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">Education<br><i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+					<br>
+					<div class="education-item bg-grey-6" ng-repeat="e in education">
+						<h3 class="emp-2 text-center">{{ e.name }}</h3>
+						<img class="edu-icon middlr transition" src="{{ e.icon }}" title="{{ e.name }}" alt="{{ e.name }}" />
+						<br>
+						<p class="text-center">
+							<strong>Type</strong>: {{ e.type }}<br>
+							<strong>Location</strong>: {{ e.location }}<br>
+							<strong>Major</strong>: {{ e.major }}<br>
+							<strong>Dates</strong>: {{ e.dates }}
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="credentials-box" class="row row-padd bg-grey-3">
+				<div class="col-md-12">
+					<h2 class="text-center">Credentials<br><i class="fa fa-certificate" aria-hidden="true"></i></h2>
+					<br>
+					<div class="cert-item bg-grey-5" ng-repeat="c in credentials">
+						<h3 class="emp-2 text-center">{{ c.name }}</h3>
+						<a title="{{ c.name }}" href="{{ c.icon }}"><img class="cert-icon middlr transition" src="{{ c.icon }}" title="{{ c.name }}" alt="{{ c.name }}"></a>
+						<br>
+						<p class="text-center">
+							<strong>Earned</strong>: {{ c.earned }}<br>
+							<strong>Expires</strong>: {{ c.expires }}<br>
+							<br>
+							<a title="{{ c.name }}" href="{{ c.icon }}">View Large</a>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="references-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">References<br><i class="fa fa-users" aria-hidden="true"></i></h2>
+					<br>
+					<div class="ref-item bg-grey-1 row" ng-repeat="r in references">
+						<div class="col-md-3">
+							<img class="ref-icon middlr transition" src="{{ r.icon }}" title="{{ r.name }}" alt="{{ r.name }}" />
+						</div>
+						<div class="col-md-9">
+							<h3><strong>Name</strong>: {{ r.name }}</h3>
+							<p><strong>Email</strong>: <a title="Send Email To {{ r.name }}" href="mailto:{{ r.email }}">{{ r.email|lowercase }}</a></p>
+							<p><strong>LinkedIn</strong>: <a title="See {{ r.name }}'s LinkedIn Profile'" href="{{ r.linkedin }}">{{ r.linkedin }}</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer-box" class="row row-padd bg-grey-4">
+				<div class="col-md-12">
+					<h2 class="text-center">Thanks For Coming!<br><i class="fa fa-heart" aria-hidden="true"></i></h2>
+					<!-- <p class="text-center"><i title="back to top" class="bta fa fa-arrow-circle-o-up transition" aria-hidden="true"></i></p><br><br> -->
+					<p class="text-center">Built With: <strong>Angular JS</strong></p><br>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+</body>
+
+</html>

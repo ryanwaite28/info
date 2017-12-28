@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="mainApp" ng-controller="mainCtrl">
+
+<head>
+  <title>Ryan M. Waite | Heroku Apps</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="my-cdn/css/emerald.css" />
+  <link rel="stylesheet" type="text/css" href="my-cdn/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="my-cdn/materialize/css/materialize.css" />
+  <link rel="stylesheet" type="text/css" href="my-cdn/materialize/icon.css">
+
+  <link rel="icon" type="image/{{ me.img.split('.')[1] }}" size="20x20" href="{{ me.img }}" />
+
+  <script src="my-cdn/js/jquery.js"></script>
+  <script src="my-cdn/js/angular.js"></script>
+
+  <script src="my-cdn/materialize/js/materialize.js"></script>
+  <script src="my-cdn/js/emerald.js"></script>
+  <script src="app.js"></script>
+
+  <style>
+    body {
+      width: 100%;
+      margin: auto;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: #f2f2f2;
+    }
+
+    #main-contain {
+      padding: 25px 10px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .bio-img {
+      width: 275px;
+      max-width: 100%;
+      padding: 4px;
+      background: white;
+      display: block;
+      margin: auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+    .app-img {
+      width: 175px;
+      max-width: 100%;
+      padding: 2px;
+      background: white;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+    p, span {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar-fixed" title="back to top" ng-click="go_to_top()">
+    <nav>
+      <div class="nav-wrapper grey darken-3">
+        <a href="#!" class="brand-logo center">{{ me.name }}</a>
+      </div>
+    </nav>
+  </div>
+
+  <!--  -->
+
+  <div id="main-contain">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m3 l4">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title text-center">{{ me.headline }}</span>
+              <br/>
+              <img id="" class="bio-img transition" src="{{ me.img }}" title="{{ me.name }}" alt="{{ me.name }}">
+              <br/>
+              <p class="text-center">{{ me.desc }}</p>
+            </div>
+            <div class="card-action">
+              <a ng-repeat="link in me.links" title="Go to - {{ link.name }}" href="{{ link.href }}">{{ link.name }}</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m9 l8">
+          <div class="card" ng-repeat="app in herokuapps">
+            <div class="card-content">
+              <span class="card-title">{{ app.title }}</span>
+              <br/>
+              <img class="app-img transition" src="{{ app.icon }}" title="{{ app.title }}" alt="{{ app.title }}">
+              <br/><br/>
+              <p>
+                {{ app.desc }}
+              </p>
+            </div>
+            <div class="card-action">
+              <a title="{{ app.title }} - Heroku" href="{{ app.heroku }}">{{ app.heroku ? "Heroku" : "" }}</a>
+              <a title="{{ app.title }} - GitHub" href="{{ app.github }}">{{ app.github ? "GitHub" : "" }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
