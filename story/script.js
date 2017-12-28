@@ -155,43 +155,43 @@ App.controller('masterCtrl', ['$scope', function($scope) {
 	$scope.references = [
 		{
 			name: 'Larry Rubin',
-			icon: '/img/laurence_rubin.png',
+			icon: '../img/laurence_rubin.png',
 			linkedin: 'https://www.linkedin.com/in/larry-rubin-cpa-82b20a6',
 			email: 'lrubin@aronsonllc.com'
 		},
 		{
 			name: 'Aaron Brachman',
-			icon: '/img/aaron_brachman.jpg',
+			icon: '../img/aaron_brachman.jpg',
 			linkedin: 'https://www.linkedin.com/in/aaron-brachman-cfp%C2%AE-aams-a82b3a3/',
 			email: 'aaron.brachman@stewardpartners.com'
 		},
 		{
 			name: 'Kristi Dearing',
-			icon: '/img/kristi_dearing.jpg',
+			icon: '../img/kristi_dearing.jpg',
 			linkedin: 'https://www.linkedin.com/in/kristi-dearing-46a62727',
 			email: 'ksddearing@gmail.com'
 		},
 		{
 			name: 'Jason Gromley',
-			icon: '/img/jason_gromley.jpg',
+			icon: '../img/jason_gromley.jpg',
 			linkedin: 'https://www.linkedin.com/in/jason-gromley-a3358031',
 			email: 'jason.gromley@shcare.net'
 		},
 		{
 			name: 'Britany Miller',
-			icon: '/img/britany_miller.jpg',
+			icon: '../img/britany_miller.jpg',
 			linkedin: 'https://www.linkedin.com/in/britanymiller',
 			email: 'b.miller5@yahoo.com'
 		},
 		{
 			name: 'Debrina Harrell',
-			icon: '/img/debrina_harrell.jpg',
+			icon: '../img/debrina_harrell.jpg',
 			linkedin: 'https://www.linkedin.com/in/debrina-harrell-mba-aa1084a',
 			email: 'debrinah@gmail.com'
 		},
 		{
 			name: 'Steve Walker',
-			icon: '/img/steve_walker.jpg',
+			icon: '../img/steve_walker.jpg',
 			linkedin: 'https://www.linkedin.com/in/stevewalkerpmp',
 			email:'SteveWalkerNY@gmail.com'
 		},
@@ -203,19 +203,19 @@ App.controller('masterCtrl', ['$scope', function($scope) {
 		},*/
 		{
 			name: 'Katrina Hill',
-			icon: '/img/katrina_hill.jpg',
+			icon: '../img/katrina_hill.jpg',
 			linkedin: 'https://www.linkedin.com/in/katrinarhill',
 			email: 'katrina.hill0823@gmail.com'
 		},
 		{
 			name: 'Rashad Hammonds',
-			icon: '/img/rashad_hammonds.jpg',
+			icon: '../img/rashad_hammonds.jpg',
 			linkedin: 'https://www.linkedin.com/in/rashad-hammonds-78403076',
 			email: 'rashad.hammonds0114@gmail.com'
 		},
 		{
 			name: 'Allison Alt',
-			icon: '/img/allison_alt.jpg',
+			icon: '../img/allison_alt.jpg',
 			linkedin: 'https://www.linkedin.com/in/allisonalt',
 			email: 'allisonclairealt@gmail.com'
 		}
