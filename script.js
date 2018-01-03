@@ -90,7 +90,7 @@ App.controller('masterCtrl', function($scope) {
 			image: 'img/heroku_icon.png',
 			description: `App I created and deployed on heroku`,
 			linkName: 'Heroku Apps',
-			linkHref: '/heroku',
+			linkHref: '/info/heroku',
 		},
 		{
 			title: 'React JS Apps',
@@ -139,7 +139,7 @@ App.controller('masterCtrl', function($scope) {
 			image: 'img/invaderz-logo-1.png',
 			description: 'Invaderz! Collect The Ancient Jewels And Avoid The Dark Ghoul.',
 			linkName: 'Invaderz',
-			linkHref: '/invaderz',
+			linkHref: '/info/invaderz',
 		},
 
 		{
